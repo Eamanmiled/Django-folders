@@ -1,0 +1,34 @@
+step 1: download python + pip install django + correct file path 
+step 2: make a folder to contain project then go into folder
+step 3: django-admin startproject <project name>
+step 4: python manage.py startapp <app name>
+step 5: python .\manage.py makemigrations /then/ python .\manage.py migrate
+step 6: In <project name>/settings.py, add your application to the INSTALLED_APPS list
+     INSTALLED_APPS = [     
+         ...
+         'myapp',
+     ]
+step 7: Open <app name>/views.py and create a simple view:
+     from django.http import HttpResponse
+
+     def home(request):
+         return HttpResponse("Hello, world. You're at the home page.")
+step 8: In <app name> directory, create a urls.py file and add:
+     from django.urls import path
+     from . import views
+
+     urlpatterns = [
+         path('', views.home, name='home'),
+     ]
+step 9: Then, include this urls.py in the project's main urls.py (myproject/urls.py)
+     from django.contrib import admin
+     from django.urls import include, path
+
+     urlpatterns = [
+         path('admin/', admin.site.urls),
+         path('', include('</////app name/////).urls')),
+     ]
+////python manage.py runserver////
+////git add .////
+////git commit -m "files"////
+////git push////
