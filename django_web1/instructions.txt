@@ -1,3 +1,6 @@
+------------------------------------------------------------
+Basic setup
+------------------------------------------------------------
 step 1: download python + pip install django + correct file path 
 step 2: make a folder to contain project then go into folder
 step 3: django-admin startproject <project name>
@@ -30,5 +33,32 @@ step 9: Then, include this urls.py in the project's main urls.py (myproject/urls
      ]
 ////python manage.py runserver////
 ////git add .////
-////git commit -m "files"////
+////git commit -m "<enter text>"////
 ////git push////
+------------------------------------------------------------------
+HTML Instructions
+------------------------------------------------------------------
+step 1: In <app name>, create a directory named templates. Within it, 
+       you can create another directory named <app name>, in that make a html files
+step 2: In settings.py, ensure that the TEMPLATES setting has the DIRS 
+option configured to include your templates directory:
+     TEMPLATES = [
+         {
+             'BACKEND': 'django.template.backends.django.DjangoTemplates',
+             'DIRS': [BASE_DIR / "templates"],
+step 3: Modify your view in views.py to render this template using Django’s render function.
+     from django.shortcuts import render
+
+     def <htmlpage name>(request):
+         return render(request, '<app name>/<htmlpage name>.html')
+--------------------------------------------------------------------
+CSS Instructions
+--------------------------------------------------------------------
+step 1: In your settings.py file, ensure you have the following settings configured:
+STATIC_URL = '/static/'  # URL to use when referring to static files located in STATIC_ROOT.
+     STATICFILES_DIRS = [    
+         BASE_DIR / "static",
+     ]
+step 2: Inside your project root directory (the same level as manage.py), create a directory named static.
+step 3: inside static make 3 subdir "images", "js" and "css"
+step 4: Add a CSS file in static/css named style.css
