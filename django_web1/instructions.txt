@@ -62,3 +62,4 @@ STATIC_URL = '/static/'  # URL to use when referring to static files located in 
 step 2: Inside your project root directory (the same level as manage.py), create a directory named static.
 step 3: inside static make 3 subdir "images", "js" and "css"
 step 4: Add a CSS file in static/css named style.css
+step 5: makesure to add {% load static %} at the top of html page
