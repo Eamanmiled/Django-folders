@@ -1,0 +1,10 @@
+------------------------------------------------------------
+Advanced Techniques
+------------------------------------------------------------
++how to add a new page & template:
+step 1: add a new view:
+    def <page name>(request):
+        return render(request, '<app name>/<page name>.html')
+step 2: create a html page and add content
+step 3: update the urls.py file in your app:
+    path('<page name>/', views.<view name>, name='<page name>'),
