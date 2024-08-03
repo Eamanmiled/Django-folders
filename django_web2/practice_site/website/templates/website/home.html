@@ -4,10 +4,12 @@
 <head>
     <title>Home Page</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}">
 </head>
 <body>
     <h1>Hello, world. You're at the home page.</h1>
     <p>blah blah</p>
     <a href="{% url 'about' %}">Go to About Page</a>
+    <a href="{% url 'example_of_extend' %}">Go to the extend Page</a>
 </body>
 </html>

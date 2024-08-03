@@ -16,4 +16,10 @@ step 1: add <image name>.ico to static/images
 step 2: Update the Django Settings:
     STATIC_URL = '/static/'
     STATICFILES_DIRS = [BASE_DIR / "static"]
-step 3:
+step 3: Link Favicon in "head" Template:
+    <link rel="shortcut icon" href="{% static 'images/<fav name>.ico' %}">
+
++how to extend base.html
+step 1: create base.html in templates
+step 2: update url + views
+step 3: add links to pages

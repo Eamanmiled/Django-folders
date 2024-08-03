@@ -5,3 +5,6 @@ def home(request):
 
 def about(request):
     return render(request, 'website/about.html')
+
+def example_of_extend(request):
+    return render(request, 'website/example_of_extend.html')
