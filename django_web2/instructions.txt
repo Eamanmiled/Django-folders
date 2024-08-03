@@ -1,10 +1,19 @@
 ------------------------------------------------------------
 Advanced Techniques
 ------------------------------------------------------------
-+how to add a new page & template:
++how to add a new page & template & url:
 step 1: add a new view:
     def <page name>(request):
         return render(request, '<app name>/<page name>.html')
 step 2: create a html page and add content
 step 3: update the urls.py file in your app:
     path('<page name>/', views.<view name>, name='<page name>'),
+step 4: add link to page:
+    <a href="{% url '<name>' %}">Go to About Page</a>
+
++how to add a favicon
+step 1: add <image name>.ico to static/images
+step 2: Update the Django Settings:
+    STATIC_URL = '/static/'
+    STATICFILES_DIRS = [BASE_DIR / "static"]
+step 3:
