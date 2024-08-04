@@ -15,3 +15,6 @@ Everything works as intended and can be used to refresh memory for future projec
 
 **Instructions** 
  - a txt file that contains instructions on more advanced django operations
+
+### 3. Previous Project
+previous project that uses models as working example
