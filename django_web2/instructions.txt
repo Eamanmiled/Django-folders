@@ -23,3 +23,14 @@ step 3: Link Favicon in "head" Template:
 step 1: create base.html in templates
 step 2: update url + views
 step 3: add links to pages
+
++how to set up superuser + admin
+step 1: python manage.py createsuperuser
+step 2: access http://127.0.0.1:8000/admin/
+step 3: Link Favicon in "head" Template:
+    <link rel="shortcut icon" href="{% static 'images/<fav name>.ico' %}">
+
++how to extend base.html
+step 1: create base.html in templates
+step 2: update url + views
+step 3: add links to pages
