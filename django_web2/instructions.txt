@@ -32,3 +32,17 @@ step 2: access http://127.0.0.1:8000/admin/
 step 1: create base.html in templates
 step 2: update url + views
 step 3: add links to pages
+
++how to create models
+step 1: Open the models.py file in your Django app and define your models as Python classes.
+    class <name>(models.Model):
+        name = models.CharField(max_length=100)
+        email = models.EmailField()
+
+        def __str__(self):
+            return self.name
+step 2: Apply Migrations (python manage.py makemigrations/migrate)
+step 3: Register Models in Admin Site:
+    from .models import <class name>
+
+    admin.site.register(<class name>)
