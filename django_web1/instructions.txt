@@ -4,7 +4,7 @@ Basic setup
 step 1: download python + pip install django + correct file path 
 step 2: make a folder to contain project then go into folder
 step 3: django-admin startproject <project name>
-step 4: python manage.py startapp <app name>
+step 4: django-admin startapp <app name>
 step 5: python .\manage.py makemigrations /then/ python .\manage.py migrate
 step 6: In <project name>/settings.py, add your application to the INSTALLED_APPS list
      INSTALLED_APPS = [     
